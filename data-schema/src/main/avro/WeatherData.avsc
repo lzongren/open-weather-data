@@ -1,0 +1,164 @@
+{
+  "namespace": "com.zliu.schema",
+  "name": "WeatherData",
+  "type": "record",
+  "fields": [
+    {
+      "name": "coord",
+      "type": {
+        "type": "record",
+        "name": "Coordinate",
+        "fields": [
+          {
+            "name": "lon",
+            "type": "double"
+          },
+          {
+            "name": "lat",
+            "type": "double"
+          }
+        ]
+      }
+    },
+    {
+      "name": "weather",
+      "type": {
+        "type": "array",
+        "items": {
+          "type": "record",
+          "name": "Weather",
+          "fields": [
+            {
+              "name": "id",
+              "type": "double"
+            },
+            {
+              "name": "main",
+              "type": "string"
+            },
+            {
+              "name": "description",
+              "type": "string"
+            },
+            {
+              "name": "icon",
+              "type": "string"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "base",
+      "type": "string"
+    },
+    {
+      "name": "main",
+      "type": {
+        "type": "record",
+        "name": "Main",
+        "fields": [
+          {
+            "name": "temp",
+            "type": "double"
+          },
+          {
+            "name": "pressure",
+            "type": "double"
+          },
+          {
+            "name": "humidity",
+            "type": "double"
+          },
+          {
+            "name": "temp_min",
+            "type": "double"
+          },
+          {
+            "name": "temp_max",
+            "type": "double"
+          }
+        ]
+      }
+    },
+    {
+      "name": "wind",
+      "type": {
+        "type": "record",
+        "name": "Wind",
+        "fields": [
+          {
+            "name": "speed",
+            "type": "double"
+          },
+          {
+            "name": "deg",
+            "type": "double"
+          }
+        ]
+      }
+    },
+    {
+      "name": "clouds",
+      "type": {
+        "type": "record",
+        "name": "Cloud",
+        "fields": [
+          {
+            "name": "all",
+            "type": "double"
+          }
+        ]
+      }
+    },
+    {
+      "name": "dt",
+      "type": "double"
+    },
+    {
+      "name": "sys",
+      "type": {
+        "type": "record",
+        "name": "Sys",
+        "fields": [
+          {
+            "name": "type",
+            "type": "double"
+          },
+          {
+            "name": "id",
+            "type": "double"
+          },
+          {
+            "name": "message",
+            "type": "double"
+          },
+          {
+            "name": "country",
+            "type": "string"
+          },
+          {
+            "name": "sunrise",
+            "type": "double"
+          },
+          {
+            "name": "sunset",
+            "type": "double"
+          }
+        ]
+      }
+    },
+    {
+      "name": "id",
+      "type": "double"
+    },
+    {
+      "name": "name",
+      "type": "string"
+    },
+    {
+      "name": "cod",
+      "type": "double"
+    }
+  ]
+}
